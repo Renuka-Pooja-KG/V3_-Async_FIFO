@@ -58,8 +58,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
       `uvm_info(get_type_name(), $sformatf("Hardware Reset: %s", tr.convert2string()), UVM_HIGH)
     end
@@ -86,8 +86,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
       `uvm_info(get_type_name(), $sformatf("Memory Reset: %s", tr.convert2string()), UVM_HIGH)
     end
@@ -114,8 +114,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
       `uvm_info(get_type_name(), $sformatf("Software Reset: %s", tr.convert2string()), UVM_HIGH)
     end
@@ -148,8 +148,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
     end
     
@@ -175,7 +175,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         read_enable == 0;
         wdata inside {[0:32'hFFFF_FFFF]};
         afull_value inside {[1:31]};
-        aempty_value == 0;
+        aempty_value == 2;
       })
       `uvm_info(get_type_name(), $sformatf("Write: %s", tr.convert2string()), UVM_HIGH)
     end
@@ -207,8 +207,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
     end
     
@@ -233,7 +233,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 1;
         wdata == 0;
-        afull_value == 0;
+        afull_value == 30;
         aempty_value inside {[1:31]};
       })
       `uvm_info(get_type_name(), $sformatf("Read: %s", tr.convert2string()), UVM_HIGH)
@@ -266,8 +266,8 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
         write_enable == 0;
         read_enable == 0;
         wdata == 0;
-        afull_value == 0;
-        aempty_value == 0;
+        afull_value == 30;
+        aempty_value == 2;
       })
     end
     
