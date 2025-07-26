@@ -63,7 +63,7 @@ module async_fifo_top_tb;
   // UVM config_db setup
   initial begin
     // Set the virtual interface for UVM (use driver modport)
-    uvm_config_db#(virtual async_fifo_interface.driver_mp)::set(null, "*", "fifo_vif", fifo_if);
+    uvm_config_db#(virtual async_fifo_interface)::set(null, "*", "fifo_vif", fifo_if);
   end
 
   // Waveform dumping
