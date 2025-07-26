@@ -11,8 +11,6 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
 
   // Main sequence body
   task body();
-    async_fifo_sequence_item tr;
-    
     `uvm_info(get_type_name(), $sformatf("Starting base sequence with %0d transactions, scenario=%0d", num_transactions, scenario), UVM_LOW)
     
     case (scenario)
@@ -48,6 +46,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
 
   // Reset scenario
   task reset_scenario();
+    async_fifo_sequence_item tr;
     `uvm_info(get_type_name(), "Starting reset scenario", UVM_LOW)
     
     // Apply hardware reset (active low) for 3 cycles
@@ -137,6 +136,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
 
   // Write-only scenario
   task write_only_scenario();
+    async_fifo_sequence_item tr;
     `uvm_info(get_type_name(), "Starting write-only scenario", UVM_LOW)
     
     // Apply hardware reset first
@@ -195,6 +195,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
 
   // Read-only scenario
   task read_only_scenario();
+    async_fifo_sequence_item tr;
     `uvm_info(get_type_name(), "Starting read-only scenario", UVM_LOW)
     
     // Apply hardware reset first
@@ -253,6 +254,7 @@ class async_fifo_base_sequence extends uvm_sequence #(async_fifo_sequence_item);
 
   // Simultaneous read and write scenario
   task simultaneous_scenario();
+    async_fifo_sequence_item tr;
     `uvm_info(get_type_name(), "Starting simultaneous scenario", UVM_LOW)
     
     // Apply hardware reset first
