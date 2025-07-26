@@ -11,7 +11,7 @@ info:
 	@echo "  reset_test  				----> to run the reset_test.sv"
 	@echo "  write_test  				----> to run the write_test.sv"
 	@echo "  read_test  				----> to run the read_test.sv"
-	@echo "  simultaneous_test  	----> to run the simultaneous_test.sv"
+	@echo "  simultaneous_test  		----> to run the simultaneous_test.sv"
 	@echo "  random_test  				----> to run the random_test.sv"
 	@echo "  waveform   				----> to open the simvision"
 	@echo "  regression 				----> to run the regression & source the cmd and open the imc"
