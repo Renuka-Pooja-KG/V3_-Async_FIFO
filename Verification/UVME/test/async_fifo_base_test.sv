@@ -28,20 +28,20 @@ class async_fifo_base_test extends uvm_test;
     phase.drop_objection(this);
   endtask
 
-  function void report_phase(uvm_phase phase);
-    super.report_phase(phase);
-    int error_count = uvm_report_server::get_server().get_severity_count(UVM_ERROR);
-    int fatal_count = uvm_report_server::get_server().get_severity_count(UVM_FATAL);
-    string test_name = get_type_name();
+  // function void report_phase(uvm_phase phase);
+  //   super.report_phase(phase);
+  //   int error_count = uvm_report_server::get_server().get_severity_count(UVM_ERROR);
+  //   int fatal_count = uvm_report_server::get_server().get_severity_count(UVM_FATAL);
+  //   string test_name = get_type_name();
     
-    $display("=====================================================");
-    if (!error_count && !fatal_count) begin
-      $display("[%s] STATUS : PASSED", test_name);
-    end else begin
-      $display("[%s] STATUS : FAILED", test_name);
-      $display("ERRORS:%d, FATAL:%d", error_count, fatal_count);
-    end
-    $display("=====================================================");
-  endfunction
+  //   $display("=====================================================");
+  //   if (!error_count && !fatal_count) begin
+  //     $display("[%s] STATUS : PASSED", test_name);
+  //   end else begin
+  //     $display("[%s] STATUS : FAILED", test_name);
+  //     $display("ERRORS:%d, FATAL:%d", error_count, fatal_count);
+  //   end
+  //   $display("=====================================================");
+  // endfunction
 
 endclass 

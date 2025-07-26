@@ -22,13 +22,4 @@ import uvm_pkg::*;
 
 `include "./../UVME/sequence/async_fifo_base_sequence.sv"
 
-
-`include "./../UVME/test/async_fifo_base_test.sv"
-`include "./../UVME/test/async_fifo_reset_test.sv"
-`include "./../UVME/test/async_fifo_write_test.sv"
-`include "./../UVME/test/async_fifo_read_test.sv"
-`include "./../UVME/test/async_fifo_simultaneous_test.sv"
-`include "./../UVME/test/async_fifo_random_test.sv"
-
-
 endpackage
