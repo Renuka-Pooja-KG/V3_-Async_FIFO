@@ -17,16 +17,16 @@ class async_fifo_base_test extends uvm_test;
     uvm_top.print_topology();
   endfunction
 
-  // task run_phase(uvm_phase phase);
-  //   phase.raise_objection(this);
+  task run_phase(uvm_phase phase);
+    phase.raise_objection(this);
     
-  //   `uvm_info(get_type_name(), "Base test run_phase - sequences should be applied in derived tests", UVM_LOW)
+    `uvm_info(get_type_name(), "Base test run_phase - sequences should be applied in derived tests", UVM_LOW)
     
-  //   // Wait for some time to allow derived tests to start their sequences
-  //   //#100ns;
+    // Wait for some time to allow derived tests to start their sequences
+    // #100ns;
     
-  //   phase.drop_objection(this);
-  // endtask
+    phase.drop_objection(this);
+  endtask
 
   function void report_phase(uvm_phase phase);
     super.report_phase(phase);
