@@ -13,7 +13,7 @@ class async_fifo_env extends uvm_env;
     super.build_phase(phase);
     m_fifo_agent    = async_fifo_agent::type_id::create("m_fifo_agent", this);
     m_fifo_coverage = async_fifo_coverage::type_id::create("m_fifo_coverage", this);
-    m_scoreboard    = scoreboard::type_id::create("m_scoreboard", this);
+    m_scoreboard    = async_fifo_scoreboard::type_id::create("m_scoreboard", this);
   endfunction
 
   function void connect_phase(uvm_phase phase);
